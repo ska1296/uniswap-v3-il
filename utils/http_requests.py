@@ -8,8 +8,7 @@ def get_current_eth_price():
 
     payload = {}
     headers = {
-        'Authorization': 'Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c',
-        'Cookie': 'cb_dm=858c4853-bf44-409a-97de-24495d68b3fc'
+        'Authorization': 'Bearer abd90df5f27a7b170cd775abf89d632b350b7c1c9d53e08b340cd9832ce52c2c'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)

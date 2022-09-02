@@ -1,0 +1,74 @@
+{
+  mints(where: {origin:"0xadc8aaddf5dcf81366fcc0212c154dfbfde1ed13"}) {
+    timestamp
+    transaction {
+      id
+    }
+    pool {
+      id
+    }
+    token0 {
+      symbol
+      id
+      decimals
+    }
+    token1 {
+      symbol
+      id
+      decimals
+    }
+    amount,
+    amount0,
+    amount1,
+    amountUSD,
+    tickLower,
+    tickUpper
+  }
+}
+
+
+
+{
+  pool(id: "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8") {
+    tick
+    token0 {
+      symbol
+      id
+      decimals
+    }
+    token1 {
+      symbol
+      id
+      decimals
+    }
+    feeTier
+    sqrtPrice
+    liquidity
+    mints (
+      where: {id: "0x0000118dcfb5178f1776acb8d6c3f1229eb84475c5c57abb766e52611b482db7#159873"}
+    ) {
+      id
+    }
+  }
+}
+
+
+{
+   swaps(where: {pool: "0x60594a405d53811d3bc4766596efd80fd545a270", timestamp_gt: 1629611736}) {
+    amount0
+    amount1
+    tick
+    transaction {
+      id
+    }
+    timestamp
+    token0 {
+      symbol
+      derivedETH
+    }
+    token1 {
+      symbol
+      derivedETH
+    }
+   }
+ }
